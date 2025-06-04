@@ -3,13 +3,9 @@ import {
   View,
   Text,
   FlatList,
-  Dimensions,
   useWindowDimensions,
   TextInput,
 } from 'react-native';
-
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 
 const Countries = () => {
   const [result, setResult] = React.useState([]);
@@ -41,7 +37,7 @@ const Countries = () => {
   });
 
   return (
-    <View style={{width: windowWidth, height: windowHeight}}>
+    <View style={{width, height}}>
       <TextInput
         style={{borderWidth: 1, height: 50, alignSelf: 'center', width: 300}}
         value={searchCountries}
